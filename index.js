@@ -9,12 +9,21 @@ function Calculate() {
     let printBmi = document.getElementById("result");
     let notNum = printBmi.innerHTML = `<div> Please enter a correct numer </div>`;
     let printResult = printBmi.innerHTML = `<div>${resultFixed}</div>`;
+    isNaN(height) || height === "" || isNaN(weight) || weight === "" ? notNum : printResult;
+    return resultFixed
 
-    return isNaN(height) || height === "" || isNaN(weight) || weight === "" ? notNum : printResult;
 
 }
 
 let clickbtn = document.querySelector("#btn");
-clickbtn.addEventListener("click", Calculate)
+// clickbtn.addEventListener("click", Calculate)
+clickbtn.addEventListener("click", Gender)
+
+/* MAke the check if is woman or man to display the correct answer */
+function Gender() {
+    const calculateNum = Calculate();
+    console.log(calculateNum);
+
+}
 
 
